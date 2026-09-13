@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <meta name="theme-color" content="#6f1019">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="description"
+          content="Proyecto académico UMB sobre la Copa Mundial de la FIFA 2026 y la participación de Colombia, con crónicas, resultados y análisis interactivo.">
+
+    <meta property="og:title" content="Mundial 2026 · Colombia en Norteamérica">
+    <meta property="og:description" content="Proyecto Integrador de Ingeniería Web I · Universidad Manuela Beltrán">
+
+    <title>Mundial 2026 | Colombia en Norteamérica · UMB</title>
+
+    <link rel="icon" href="assets/img/umb-logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/img/umb-logo.jpeg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="reading-progress" aria-hidden="true">
+        <span id="readingProgress"></span>
+    </div>
+
+    <!-- =====================================================
+         ENCABEZADO INSTITUCIONAL
+         ===================================================== -->
+    <header class="institution-header">
+        <div class="container institution-header__inner">
+            <a class="umb-brand" href="#inicio" data-tab-link="inicio" aria-label="Ir a la portada del proyecto">
+                <img src="assets/img/umb-logo.jpeg" alt="Logo de la Universidad Manuela Beltrán">
+                <span>
+                    <strong>Universidad Manuela Beltrán</strong>
+                    <small>Ingeniería Web I · Proyecto Integrador</small>
+                </span>
+            </a>
+
+            <div class="project-name">
+                <span>GUÍA 3 · DISEÑO DEL FRONT-END</span>
+                <strong>Mundial 2026: Colombia en Norteamérica</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         NAVEGACIÓN EN PESTAÑAS
+         Continúa siendo una single-page: cada pestaña usa
+         anclas internas y activa un panel dentro del mismo main.
+         ===================================================== -->
+    <nav class="tab-nav" aria-label="Secciones principales">
+        <div class="container tab-nav__scroll" role="tablist" aria-label="Contenido del proyecto">
+            <a class="tab-link is-active"
+               id="tab-inicio"
+               href="#inicio"
+               role="tab"
+               aria-selected="true"
+               aria-controls="inicio"
+               data-tab-link="inicio">
+                Portada
+            </a>
+
+            <a class="tab-link"
+               id="tab-colombia"
+               href="#colombia"
+               role="tab"
+               aria-selected="false"
+               aria-controls="colombia"
+               data-tab-link="colombia">
+                Colombia
+            </a>
+
+            <a class="tab-link"
+               id="tab-cronicas"
+               href="#cronicas"
+               role="tab"
+               aria-selected="false"
+               aria-controls="cronicas"
+               data-tab-link="cronicas">
+                Crónicas
+            </a>
+
+            <a class="tab-link"
+               id="tab-resultados"
+               href="#resultados"
+               role="tab"
+               aria-selected="false"
+               aria-controls="resultados"
+               data-tab-link="resultados">
+                Resultados
+            </a>
+
+            <a class="tab-link"
+               id="tab-proyecto"
+               href="#proyecto"
+               role="tab"
+               aria-selected="false"
+               aria-controls="proyecto"
+               data-tab-link="proyecto">
+                Proyecto
+            </a>
+
+            <a class="tab-link"
+               id="tab-contacto"
+               href="#contacto"
+               role="tab"
+               aria-selected="false"
+               aria-controls="contacto"
+               data-tab-link="contacto">
+                Contacto
+            </a>
+        </div>
+    </nav>
+
+    <!-- UN ÚNICO MAIN: cumple la semántica de la guía -->
+    <main id="contenido">
+
+        <!-- =================================================
+             TAB 1 · PORTADA / INICIO
+             ================================================= -->
+        <section class="tab-panel is-active"
+                 id="inicio"
+                 role="tabpanel"
+                 aria-labelledby="tab-inicio"
+                 tabindex="0">
+
+            <section class="hero" aria-labelledby="heroTitle">
+                <div class="hero__image" aria-hidden="true"></div>
+                <div class="hero__overlay" aria-hidden="true"></div>
+
+                <div class="container hero__layout">
+                    <article class="hero__copy">
+                        <div class="academic-badge">
+                            <img src="assets/img/umb-logo.jpeg" alt="" aria-hidden="true">
+                            <span>Trabajo académico UMB · Ingeniería Web I</span>
+                        </div>
+
+                        <span class="eyebrow eyebrow--light">11 JUN — 19 JUL 2026</span>
+
+                        <h1 id="heroTitle">
+                            El Mundial más grande.
+                            <span>La historia de Colombia, contada como noticia.</span>
+                        </h1>
+
+                        <p>
+                            Resultados, protagonistas, contexto y análisis de una Copa Mundial
+                            de 48 selecciones. Un especial interactivo centrado en la campaña
+                            de Colombia y en los nombres que marcaron el torneo.
+                        </p>
+
+                        <div class="hero__actions">
+                            <a class="btn btn--yellow" href="#cronicas" data-tab-link="cronicas">
+                                Leer las crónicas
+                            </a>
+                            <a class="btn btn--glass" href="#resultados" data-tab-link="resultados">
+                                Explorar los 104 partidos
+                            </a>
+                        </div>
+                    </article>
+
+                    <aside class="headline-card" aria-label="Titular del torneo">
+                        <span class="headline-card__label">LA FOTO FINAL</span>
+                        <h2>España volvió a la cima</h2>
+                        <div class="headline-score">
+                            <span>🇪🇸 España</span>
+                            <strong>1 — 0</strong>
+                            <span>Argentina 🇦🇷</span>
+                        </div>
+                        <p>Final · Tras prórroga · 19 de julio de 2026</p>
+                        <small>Rodri terminó como Balón de Oro del torneo.</small>
+                    </aside>
+                </div>
+
+                <small class="hero__credit">
+                    Imagen del Mundial 2026: YantsImages / Wikimedia Commons · CC BY-SA 4.0
+                </small>
+            </section>
+
+            <section class="home-summary">
+                <div class="container">
+                    <div class="quick-facts">
+                        <article><strong>48</strong><span>selecciones</span></article>
+                        <article><strong>104</strong><span>partidos</span></article>
+                        <article><strong>3</strong><span>países anfitriones</span></article>
+                        <article><strong>10.º</strong><span>Colombia en la tabla final FIFA</span></article>
+                    </div>
+
+                    <div class="news-grid">
+                        <article class="lead-story">
+                            <span class="kicker">COLOMBIA</span>
+                            <h2>Una campaña invicta en 120 minutos que terminó desde el punto penal</h2>
+                            <p>
+                                Colombia ganó el Grupo K, eliminó a Ghana y llegó a octavos sin perder.
+                                Suiza necesitó una tanda de penales para dejarla fuera del torneo.
+                            </p>
+                            <a href="#colombia" data-tab-link="colombia">Ver el balance de Colombia →</a>
+                        </article>
+
+                        <article class="news-brief">
+                            <span class="kicker">EL TORNEO</span>
+                            <h3>Rodri dirigió a la campeona</h3>
+                            <p>FIFA lo eligió Balón de Oro después del segundo título mundial de España.</p>
+                        </article>
+
+                        <article class="news-brief">
+                            <span class="kicker">GOLEADOR</span>
+                            <h3>Mbappé terminó con 10</h3>
+                            <p>El francés se llevó la Bota de Oro después de una Copa Mundial de enorme producción.</p>
+                        </article>
+
+                        <article class="news-brief">
+                            <span class="kicker">COLOMBIA</span>
+                            <h3>Lucho fue la referencia</h3>
+                            <p>Luis Díaz fue Jugador del Partido ante Uzbekistán y Ghana.</p>
+                        </article>
+                    </div>
+
+                    <div class="award-grid" id="awardGrid"></div>
+                </div>
+            </section>
+        </section>
+
+        <!-- =================================================
+             TAB 2 · COLOMBIA
+             ================================================= -->
+        <section class="tab-panel"
+                 id="colombia"
+                 role="tabpanel"
+                 aria-labelledby="tab-colombia"
+                 tabindex="0"
+                 hidden>
+
+            <div class="section-shell section-shell--dark">
+                <div class="container">
+                    <div class="section-heading section-heading--light">
+                        <div>
+                            <span class="eyebrow eyebrow--yellow">SELECCIÓN COLOMBIA</span>
+                            <h2>Más que cinco resultados: una campaña con identidad</h2>
+                        </div>
+                        <p>
+                            Lideró el Grupo K con siete puntos, mantuvo cuatro porterías
+                            consecutivas a cero desde el segundo partido y terminó décima
+                            en la clasificación final de FIFA.
+                        </p>
+                    </div>
+
+                    <div class="colombia-feature">
+                        <figure>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/2026_FIFA_World_Cup_Match_96%2C_Switzerland_v_Colombia_-_FIFA_Fan_Fest_Ciudad_de_M%C3%A9xico_-_01.jpg/1280px-2026_FIFA_World_Cup_Match_96%2C_Switzerland_v_Colombia_-_FIFA_Fan_Fest_Ciudad_de_M%C3%A9xico_-_01.jpg"
+                                alt="Aficionados observando Suiza contra Colombia en un FIFA Fan Fest durante el Mundial 2026"
+                                loading="lazy">
+                            <figcaption>
+                                Suiza-Colombia en el FIFA Fan Fest de Ciudad de México.
+                                ProtoplasmaKid / Wikimedia Commons · CC BY 4.0.
+                            </figcaption>
+                        </figure>
+
+                        <aside class="colombia-balance">
+                            <span class="kicker">BALANCE FINAL</span>
+                            <strong class="big-rank">10.º</strong>
+                            <p>posición oficial de Colombia en el torneo según FIFA</p>
+
+                            <dl>
+                                <div><dt>Partidos</dt><dd>5</dd></div>
+                                <div><dt>Victorias</dt><dd>3</dd></div>
+                                <div><dt>Empates</dt><dd>2</dd></div>
+                                <div><dt>Goles a favor</dt><dd>6</dd></div>
+                                <div><dt>Goles en contra</dt><dd>1</dd></div>
+                                <div><dt>Eliminación</dt><dd>Penales</dd></div>
+                            </dl>
+                        </aside>
+                    </div>
+
+                    <div class="subheading">
+                        <div>
+                            <span class="kicker kicker--yellow">LOS NOMBRES DE LA CAMPAÑA</span>
+                            <h2>Los futbolistas que más marcaron el relato</h2>
+                        </div>
+                        <p>
+                            No es un ranking estadístico absoluto; es una selección editorial
+                            basada en influencia, premios FIFA y momentos decisivos.
+                        </p>
+                    </div>
+
+                    <div class="players-grid" id="playersGrid"></div>
+
+                    <div class="group-k-block">
+                        <article>
+                            <span class="kicker kicker--yellow">GRUPO K</span>
+                            <h2>Colombia lo ganó sin perder</h2>
+                            <p>
+                                La victoria ante Uzbekistán, el 1-0 frente a RD del Congo
+                                y el 0-0 con Portugal fueron suficientes para terminar por encima
+                                de una selección portuguesa cargada de figuras.
+                            </p>
+                        </article>
+
+                        <div class="group-table-wrap" id="groupKTable"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             TAB 3 · CRÓNICAS
+             ================================================= -->
+        <section class="tab-panel"
+                 id="cronicas"
+                 role="tabpanel"
+                 aria-labelledby="tab-cronicas"
+                 tabindex="0"
+                 hidden>
+
+            <div class="section-shell journal-shell">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">PARTIDO A PARTIDO</span>
+                            <h2>Las crónicas de Colombia</h2>
+                        </div>
+                        <p>
+                            Selecciona un encuentro para cambiar la historia. La idea es que
+                            esta sección se lea como un especial periodístico y no como una
+                            simple lista de marcadores.
+                        </p>
+                    </div>
+
+                    <div class="story-selector" id="storySelector" aria-label="Seleccionar partido de Colombia"></div>
+
+                    <article class="match-story" id="matchStory" aria-live="polite"></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             TAB 4 · RESULTADOS
+             ================================================= -->
+        <section class="tab-panel"
+                 id="resultados"
+                 role="tabpanel"
+                 aria-labelledby="tab-resultados"
+                 tabindex="0"
+                 hidden>
+
+            <div class="section-shell results-shell">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">CENTRO DE RESULTADOS</span>
+                            <h2>Los 104 partidos, sin saturar la pantalla</h2>
+                        </div>
+                        <p>
+                            Busca una selección, cambia la fase o filtra por grupo.
+                            Solo se cargan algunos resultados a la vez.
+                        </p>
+                    </div>
+
+                    <form class="result-tools" id="resultTools" role="search">
+                        <div class="field field--search">
+                            <label for="teamSearch">Buscar equipo o fase</label>
+                            <input id="teamSearch"
+                                   type="search"
+                                   placeholder="Ejemplo: Colombia, España, semifinal...">
+                        </div>
+
+                        <div class="field">
+                            <label for="stageFilter">Fase</label>
+                            <select id="stageFilter">
+                                <option value="all">Todas</option>
+                                <option value="groups">Fase de grupos</option>
+                                <option value="Dieciseisavos">Dieciseisavos</option>
+                                <option value="Octavos de final">Octavos</option>
+                                <option value="Cuartos de final">Cuartos</option>
+                                <option value="Semifinal">Semifinales</option>
+                                <option value="Tercer puesto">Tercer puesto</option>
+                                <option value="Final">Final</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="groupFilter">Grupo</label>
+                            <select id="groupFilter">
+                                <option value="all">Todos</option>
+                                <option>A</option><option>B</option><option>C</option>
+                                <option>D</option><option>E</option><option>F</option>
+                                <option>G</option><option>H</option><option>I</option>
+                                <option>J</option><option>K</option><option>L</option>
+                            </select>
+                        </div>
+
+                        <div class="result-counter">
+                            <span id="resultCount">104</span>
+                            <small>partidos encontrados</small>
+                        </div>
+                    </form>
+
+                    <div class="results-grid" id="resultsGrid"></div>
+
+                    <div class="load-more-wrap">
+                        <button class="btn btn--dark" id="loadMore" type="button">
+                            Mostrar más partidos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             TAB 5 · PROYECTO
+             ================================================= -->
+        <section class="tab-panel"
+                 id="proyecto"
+                 role="tabpanel"
+                 aria-labelledby="tab-proyecto"
+                 tabindex="0"
+                 hidden>
+
+            <div class="section-shell project-shell">
+                <div class="container project-layout">
+                    <article>
+                        <div class="project-university">
+                            <img src="assets/img/umb-logo.jpeg" alt="Logo Universidad Manuela Beltrán">
+                            <div>
+                                <span class="kicker">PROYECTO INTEGRADOR</span>
+                                <h2>Mundial 2026: Colombia en Norteamérica</h2>
+                                <p>
+                                    <strong>Universidad Manuela Beltrán</strong><br>
+                                    Ingeniería Web I · Guía 3 · Diseño del Front-End
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="lead">
+                            La interfaz fue diseñada como una <strong>single-page application académica</strong>:
+                            sigue existiendo un solo documento HTML y un solo <code>main</code>,
+                            pero las secciones se presentan mediante pestañas para evitar saturación visual.
+                        </p>
+
+                        <h3>Integrantes</h3>
+                        <ul class="students">
+                            <li>Diego Hernán Romero</li>
+                            <li>Axel Lozano</li>
+                            <li>Felipe Rincón</li>
+                        </ul>
+
+                        <div class="project-note">
+                            <strong>Nota:</strong>
+                            Este es un trabajo académico. No es un sitio oficial de FIFA ni de la Universidad.
+                            El logo UMB se usa únicamente para identificar la institución a la que pertenece la entrega.
+                        </div>
+                    </article>
+
+                    <aside class="architecture-card">
+                        <span class="kicker kicker--yellow">ARQUITECTURA</span>
+                        <h3>Semántica + componentes + polimorfismo</h3>
+
+                        <pre><code>BaseComponent
+├── MatchCard
+│   ├── GroupMatchCard
+│   └── KnockoutMatchCard
+├── PlayerSpotlightCard
+└── AwardCard
+
+TournamentRepository
+WorldCupApp</code></pre>
+
+                        <p>
+                            Las clases hijas sobrescriben <code>render()</code>. La función
+                            <code>renderComponents()</code> puede procesarlas sin conocer
+                            el tipo concreto del componente.
+                        </p>
+
+                        <div class="rubric-mini">
+                            <span>✓ Un solo main</span>
+                            <span>✓ Anclas internas</span>
+                            <span>✓ Flexbox / responsive</span>
+                            <span>✓ Formulario accesible</span>
+                            <span>✓ Código comentado</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             TAB 6 · CONTACTO
+             ================================================= -->
+        <section class="tab-panel"
+                 id="contacto"
+                 role="tabpanel"
+                 aria-labelledby="tab-contacto"
+                 tabindex="0"
+                 hidden>
+
+            <div class="section-shell contact-shell">
+                <div class="container contact-layout">
+                    <article>
+                        <span class="eyebrow eyebrow--yellow">CONTACTO</span>
+                        <h2>¿Cuál fue el partido que más te quedó?</h2>
+                        <p>
+                            Este formulario es demostrativo. Su objetivo es mostrar
+                            accesibilidad, etiquetas correctamente asociadas y validación HTML5.
+                        </p>
+
+                        <div class="contact-credit">
+                            <img src="assets/img/umb-logo.jpeg" alt="Logo UMB">
+                            <p>
+                                Proyecto académico<br>
+                                <strong>Universidad Manuela Beltrán</strong>
+                            </p>
+                        </div>
+                    </article>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="name">Nombre completo</label>
+                                <input id="name" name="name" type="text" autocomplete="name" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Correo electrónico</label>
+                                <input id="email" name="email" type="email" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="favorite">Partido favorito</label>
+                            <input id="favorite" name="favorite" type="text"
+                                   placeholder="Ejemplo: Colombia 0-0 Portugal" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Comentario</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button class="btn btn--yellow" type="submit">Validar comentario</button>
+                        <p class="form-status" id="formStatus" role="status" hidden></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <img src="assets/img/umb-logo.jpeg" alt="Logo Universidad Manuela Beltrán">
+                <div>
+                    <strong>Mundial 2026: Colombia en Norteamérica</strong>
+                    <span>Proyecto Integrador · Ingeniería Web I · UMB</span>
+                </div>
+            </div>
+
+            <div class="footer__students">
+                Diego Hernán Romero · Axel Lozano · Felipe Rincón
+            </div>
+
+            <a href="#inicio" data-tab-link="inicio">Volver a portada ↑</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/classes.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

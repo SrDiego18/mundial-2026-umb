@@ -1,0 +1,9 @@
+{
+  "name": "Mundial 2026: Colombia en Norteamérica · UMB",
+  "short_name": "Mundial 2026 UMB",
+  "start_url": "./#inicio",
+  "display": "standalone",
+  "background_color": "#06121d",
+  "theme_color": "#74141d",
+  "description": "Proyecto académico de Ingeniería Web I de la Universidad Manuela Beltrán."
+}
