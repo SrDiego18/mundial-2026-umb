@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Mundial 2026: Colombia en Norteamérica. Plataforma académica interactiva con resultados y análisis conectada a MySQL.">
+  <meta name="theme-color" content="#101a2d">
+  <title>Mundial 2026 | Colombia en Norteamérica · UMB</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="top-line"><span>SEMILLERO UMB SOFT <span class="top-separator">/</span> INGENIERÍA WEB</span><span class="top-line__right"><i class="status-pulse"></i><span id="serverBadge">COMPROBANDO MYSQL</span></span></div>
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio" data-nav="inicio"><span class="brand__symbol">M<span>26</span></span><span class="brand__copy"><strong>MUNDIAL<span>2026</span></strong><small>COLOMBIA EN NORTEAMÉRICA</small></span></a>
+    <nav class="main-nav" aria-label="Navegación principal" id="nav">
+      <button type="button" class="nav-item is-active" data-nav="inicio">Inicio</button>
+      <button type="button" class="nav-item" data-nav="partidos">Partidos</button>
+      <button type="button" class="nav-item" data-nav="colombia">Colombia</button>
+      <button type="button" class="nav-item" data-nav="grupos">Grupos</button>
+      <button type="button" class="nav-item" data-nav="cronicas">Crónicas</button>
+      <button type="button" class="nav-item" data-nav="estadisticas">Estadísticas</button>
+      <button type="button" class="nav-item" data-nav="comunidad">Comunidad</button>
+    </nav>
+    <div class="header__actions"><button type="button" id="themeButton" class="icon-button theme-button" title="Cambiar tema" aria-label="Cambiar tema">☼</button><a class="admin-shortcut" href="/admin.html" title="Panel administrativo" aria-label="Abrir administración">↗</a><button type="button" class="menu-button" id="menuButton" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">☰</button></div>
+  </div>
+</header>
+<div id="offlineNotice" class="offline-notice" role="alert" hidden>⚠ La conexión con MySQL no está disponible. Revisa el servidor y la configuración del archivo .env. <button type="button" id="retryButton">Reintentar</button></div>
+<main id="contenido">
+  <!-- Vista inicio -->
+  <section class="view" id="inicio" data-view>
+    <div class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy"><div class="eyebrow"><span class="eyebrow__dash"></span> EDICIÓN NORTEAMÉRICA 2026 <span class="dot-sep">·</span> ANÁLISIS UMB</div>
+          <h1>EL MUNDIAL<br><em>SE VIVE</em><br>DIFERENTE<span class="period">.</span></h1>
+          <p>Una experiencia para revivir los resultados, seguir el camino de Colombia y descubrir las historias que dejó la Copa Mundial 2026.</p>
+          <div class="hero__actions"><button type="button" class="btn btn--lime" data-nav="partidos">EXPLORAR PARTIDOS <span>↗</span></button><button type="button" class="btn btn--outline" data-nav="colombia">RUTA DE COLOMBIA <span>→</span></button></div>
+          <div class="hero__meta"><span><strong>48</strong> SELECCIONES</span><span><strong>12</strong> GRUPOS</span><span><strong>104</strong> PARTIDOS</span></div>
+        </div>
+        <div class="hero__graphic"><img src="/assets/img/stadium.svg" alt="Ilustración gráfica de un estadio de fútbol iluminado"/><div class="hero__editorial"><span class="editorial-tag">RESULTADO FINAL</span><strong>UNA COPA.<br>MILES DE HISTORIAS.</strong><span>11 JUN — 19 JUL · 2026</span></div><div class="hero__vertical">EL FÚTBOL NOS CONECTA — 2026</div></div>
+      </div>
+      <div class="hero__bottom"><div class="container hero__bottom-inner"><span><span class="live-dot"></span> ARCHIVO OFICIAL DEL TORNEO · DATOS DEL PROYECTO</span><span>DESLIZA PARA DESCUBRIR <span>↓</span></span></div></div>
+    </div>
+    <div class="container home-content">
+      <div class="section-heading home-section-heading"><div><span class="overline">EL TORNEO EN DATOS</span><h2>Las cifras <em>hablan</em></h2></div><p>Una mirada rápida al campeonato, construida con información consultada desde MySQL.</p></div>
+      <div class="kpi-grid" id="homeKpis"><article class="kpi"><span>PARTIDOS</span><strong>104</strong><small>Resultados registrados</small></article><article class="kpi"><span>GOLES MARCADOS</span><strong>—</strong><small>Calculando...</small></article><article class="kpi"><span>PROMEDIO DE GOLES</span><strong>—</strong><small>Por encuentro</small></article><article class="kpi kpi--accent"><span>GRUPOS</span><strong>12</strong><small>Primera fase del torneo</small></article></div>
+      <div class="spotlight-grid"><article class="spotlight-main"><div class="spotlight-main__top"><span class="overline overline--lime">EL PARTIDO DEFINITIVO</span><span class="pill">FINAL · 19 JUL 2026</span></div><h3>La noche en que<br><em>todo se decidió.</em></h3><p>Revive el resultado del último partido de la Copa del Mundo y explora la ruta de las selecciones.</p><div class="final-score" id="homeFinal">CONSULTANDO FINAL...</div><button class="text-action" data-nav="partidos">EXPLORAR EL TORNEO ↗</button></article><article class="spotlight-side"><span class="overline">COLOMBIA EN EL MUNDIAL</span><div class="colombia-banner"><div class="colombia-banner__flag">🇨🇴</div><strong>EL CAMINO<br>TRICOLOR</strong></div><p>Partido a partido: resultados, momentos destacados y análisis de nuestra selección.</p><button class="btn btn--dark" data-nav="colombia">VER RECORRIDO →</button></article></div>
+      <div class="home-stories-header"><div><span class="overline">PERIODISMO DEPORTIVO</span><h2>Historias que <em>quedan</em></h2></div><button class="text-action" data-nav="cronicas">VER TODAS LAS CRÓNICAS ↗</button></div><div class="home-stories" id="homeStories"><p class="skeleton">Cargando artículos...</p></div>
+    </div>
+  </section>
+  <!-- Vista partidos -->
+  <section class="view" id="partidos" data-view hidden>
+    <div class="page-heading"><div class="container"><span class="overline overline--lime">CENTRO DE RESULTADOS · EDICIÓN 2026</span><h1>CADA PARTIDO.<br><em>CADA EMOCIÓN.</em></h1><p>Consulta los 104 encuentros almacenados en la base de datos y encuentra cualquier selección, fecha o fase.</p></div></div>
+    <div class="container content-section">
+      <div class="filter-panel"><div class="filter-panel__heading"><div><span class="overline">BUSCADOR INTELIGENTE</span><h2>Explora los resultados</h2></div><button class="btn btn--sm btn--outline-dark" id="exportCsv">↓ DESCARGAR CSV</button></div><div class="filters"><label class="filter-input">Buscar selección o fase<input type="search" id="searchMatches" placeholder="Ej. Colombia, Argentina..." autocomplete="off"></label><label>Fase<select id="filterStage"><option value="">Todas las fases</option></select></label><label>Grupo<select id="filterGroup"><option value="">Todos los grupos</option></select></label><label>Selección<select id="filterTeam"><option value="">Todas las selecciones</option></select></label></div><div class="filter-panel__footer"><div><span id="matchCount">—</span> partidos encontrados <span class="separator">·</span> <button class="link-button" id="clearFilters">Limpiar filtros</button></div><label class="switch-label"><input type="checkbox" id="favoritesOnly"><span>☆ Solo favoritos</span></label></div></div>
+      <div class="results-heading"><h3>Marcadores del torneo</h3><span id="matchesPageInfo">Cargando registros...</span></div><div class="match-grid" id="matchList"><p class="skeleton">Consultando MySQL...</p></div><div class="pagination" id="matchPagination"></div>
+    </div>
+  </section>
+  <!-- Vista Colombia -->
+  <section class="view" id="colombia" data-view hidden><div class="page-heading page-heading--colombia"><div class="container"><span class="overline overline--lime">ORGULLO TRICOLOR · GRUPO K</span><h1>EL CORAZÓN<br><em>DE COLOMBIA.</em></h1><p>Una historia de esfuerzo, talento y pasión contada a través de cada partido.</p><div class="tricolor-line"><span></span><span></span><span></span></div></div></div><div class="container content-section"><div class="section-heading"><div><span class="overline">EL RECORRIDO</span><h2>Partido a <em>partido</em></h2></div><p>Estos resultados se cargan directamente desde la tabla <code>partidos</code> de MySQL.</p></div><div class="colombia-match-list" id="colombiaMatches"><p class="skeleton">Cargando partidos de Colombia...</p></div><div class="two-column-content"><div><div class="section-heading section-heading--compact"><div><span class="overline">NÚMEROS DE LA SELECCIÓN</span><h2>Grupo <em>K</em></h2></div></div><div id="colombiaTable" class="standings-card"><p class="skeleton">Cargando posiciones...</p></div></div><div class="colombia-player-feature"><span class="overline overline--lime">PROTAGONISTAS</span><h3>Los nombres<br>de la ilusión.</h3><div class="player-tags"><span>Luis Díaz</span><span>James Rodríguez</span><span>Jhon Arias</span><span>Daniel Muñoz</span></div><p>Una selección con recursos ofensivos, compromiso colectivo y momentos para recordar.</p></div></div></div></section>
+  <!-- Vista grupos -->
+  <section class="view" id="grupos" data-view hidden><div class="page-heading"><div class="container"><span class="overline overline--lime">12 GRUPOS · 48 EQUIPOS</span><h1>LA FASE<br><em>DE GRUPOS.</em></h1><p>Consulta y compara el rendimiento de cada selección durante la primera ronda.</p></div></div><div class="container content-section"><div class="group-selector" id="groupSelector" role="group" aria-label="Seleccionar grupo"></div><div class="section-heading section-heading--compact"><div><span class="overline">CLASIFICACIÓN ESTADÍSTICA</span><h2 id="groupTitle">Grupo <em>A</em></h2></div><span class="muted">PJ · PG · PE · PP · DG · PTS</span></div><div class="standings-card standings-card--wide" id="groupTable"><p class="skeleton">Consultando clasificación...</p></div><p class="footnote">* Esta tabla calcula puntos, diferencia de gol y goles marcados. Para empates complejos no aplica todos los criterios de desempate oficiales.</p></div></section>
+  <!-- Vista cronicas -->
+  <section class="view" id="cronicas" data-view hidden><div class="page-heading"><div class="container"><span class="overline overline--lime">EL LADO HUMANO DEL JUEGO</span><h1>MÁS ALLÁ<br><em>DEL MARCADOR.</em></h1><p>Relatos y análisis editoriales del recorrido colombiano por Norteamérica.</p></div></div><div class="container content-section"><div class="section-heading"><div><span class="overline">ARCHIVO EDITORIAL</span><h2>Crónicas del <em>Mundial</em></h2></div><p>Contenido gestionado desde el panel administrativo y guardado en MySQL.</p></div><div class="story-grid" id="storiesList"><p class="skeleton">Cargando crónicas...</p></div></div></section>
+  <!-- Vista estadísticas -->
+  <section class="view" id="estadisticas" data-view hidden><div class="page-heading"><div class="container"><span class="overline overline--lime">DATOS & ANÁLISIS</span><h1>LOS NÚMEROS<br><em>DEL FÚTBOL.</em></h1><p>Explora indicadores que calculamos directamente a partir de los resultados de MySQL.</p></div></div><div class="container content-section"><div class="kpi-grid" id="analyticsKpis"></div><div class="analytics-layout"><article class="chart-card"><div class="chart-card__header"><span class="overline">DISTRIBUCIÓN</span><h2>Partidos por fase</h2><p>Cantidad de encuentros en cada etapa del torneo.</p></div><div id="stageBars" class="bar-chart"></div></article><article class="chart-card"><div class="chart-card__header"><span class="overline">PRODUCCIÓN OFENSIVA</span><h2>Goles por selección</h2><p>Equipos con más goles anotados en los resultados registrados.</p></div><div id="scorersBars" class="bar-chart"></div></article></div></div></section>
+  <!-- Vista comunidad -->
+  <section class="view" id="comunidad" data-view hidden><div class="page-heading"><div class="container"><span class="overline overline--lime">UNA PASIÓN COMPARTIDA</span><h1>EL FÚTBOL<br><em>NOS UNE.</em></h1><p>Deja tu opinión y forma parte del archivo de recuerdos del Mundial 2026.</p></div></div><div class="container content-section"><div class="community-layout"><div class="form-card"><div class="form-card__intro"><span class="overline">TU VOZ IMPORTA</span><h2>Comparte tu <em>pasión</em></h2><p>Tu opinión se guarda de forma real en la base de datos MySQL. Tu correo no se publica.</p></div><form id="commentForm"><div class="form-row"><label>Nombre completo<input name="nombre" minlength="2" maxlength="100" required autocomplete="name" placeholder="Tu nombre"></label><label>Correo electrónico<input name="correo" type="email" maxlength="180" required autocomplete="email" placeholder="correo@ejemplo.com"></label></div><label>Selección favorita<input name="favorito" minlength="2" maxlength="100" required placeholder="Ej. Colombia"></label><label>Tu comentario<textarea name="mensaje" minlength="10" maxlength="1200" required rows="5" placeholder="¿Qué fue lo que más te emocionó del Mundial?"></textarea></label><div class="form-actions"><button type="submit" id="commentSubmit" class="btn btn--lime">PUBLICAR COMENTARIO ↗</button><span class="privacy-note">Datos guardados en MySQL</span></div><p id="commentStatus" class="form-message" role="status" aria-live="polite"></p></form></div><div class="community-feed"><div class="community-feed__head"><span class="overline">LA TRIBUNA</span><h2>La gente <em>opina</em></h2><p>Mensajes recientes de la comunidad.</p></div><div id="commentList"><p class="skeleton">Cargando mensajes...</p></div></div></div></div></section>
+</main>
+<footer class="footer"><div class="container footer__top"><div class="footer__brand"><span class="footer__mark">M26</span><div><strong>MUNDIAL 2026</strong><p>Colombia en Norteamérica.</p></div></div><p>Proyecto académico de Ingeniería Web<br>Universidad Manuela Beltrán · Semillero UMB SOFT</p></div><div class="container footer__bottom"><span>© 2026 · Diego Hernán Romero · Axel Lozano · Felipe Rincón</span><span>CONTENIDO ACADÉMICO · NO ES UN SITIO OFICIAL DE FIFA</span><button data-nav="inicio" type="button">VOLVER ARRIBA ↑</button></div></footer>
+<dialog id="storyDialog" class="story-dialog"><button type="button" class="dialog-close" id="closeDialog" aria-label="Cerrar artículo">✕</button><div id="storyDialogContent"></div></dialog>
+<dialog id="matchDialog" class="match-dialog"><button type="button" class="dialog-close" id="closeMatchDialog" aria-label="Cerrar partido">✕</button><div id="matchDialogContent"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

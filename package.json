@@ -1,0 +1,22 @@
+{
+  "name": "mundial-2026-umb-mysql",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Proyecto UMB Mundial 2026 - front-end interactivo, API y MySQL 8",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "node --watch server/app.js",
+    "check": "node --check server/app.js && node --check server/db.js && node --check server/services.js && node --check server/logic.js && node --check public/assets/js/app.js && node --check public/assets/js/admin.js",
+    "test": "node --test tests/*.test.js",
+    "db:check": "node server/check-db.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.4"
+  }
+}
